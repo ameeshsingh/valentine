@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rashmi 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe6eb, #ffffff);
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      text-align: center;
+      width: 420px;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+    }
+
+    p {
+      margin: 0 0 16px 0;
+      color: #555;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 18px auto;
+      width: 100%;
+      max-height: 280px;   /* KEY FIX */
+      object-fit: cover;  /* KEY FIX */
+      border-radius: 14px;
+    }
+
+    .buttons {
+      position: relative;
+      height: 60px;
+    }
+
+    button {
+      padding: 12px 26px;
+      font-size: 16px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+      left: 90px;
+    }
+
+    #noBtn {
+      background: #e0e0e0;
+      color: #333;
+      left: 210px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Rashmi 💌</h1>
+    <p>Will you be my Valentine?</p>
+
+    <img src="pic1.jpeg" alt="Us together">
+
+    <div class="buttons">
+      <button id="yesBtn" onclick="goYes()">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    function moveButton() {
+      noBtn.style.left = Math.random() * 260 + "px";
+      noBtn.style.top = Math.random() * 30 + "px";
+    }
+
+    noBtn.addEventListener("mouseenter", moveButton);
+    noBtn.addEventListener("mouseover", moveButton);
+
+    function goYes() {
+      window.location.href = "yes1.html";
+    }
+  </script>
+
+</body>
+</html>
